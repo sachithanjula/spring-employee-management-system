@@ -14,7 +14,7 @@ import java.util.List;
 public class Department {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;
 
@@ -27,7 +27,7 @@ public class Department {
     @Column(name = "CREATEDDATE")
     private Date createDate;
 
-    @OneToMany
+    @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 
 }
