@@ -7,4 +7,6 @@ import sachith.dev.studentmanagmentservice.response.CommonJsonResponse;
 
 public interface DepartmentService {
     ResponseEntity<CommonJsonResponse> createDepartment(DepartmentMapper departmentMapper);
+    ResponseEntity<CommonJsonResponse> getAllDepartments();
+
 }
