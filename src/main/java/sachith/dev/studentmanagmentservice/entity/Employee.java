@@ -35,6 +35,9 @@ public class Employee {
     @Column(name = "CREATEDDATE")
     private Date createdDate;
 
+    @Column(name = "EMP_STATUS")
+    private String empStatus;
+
     @ManyToOne
     @JoinColumn(name = "DEPID")
     private Department department;

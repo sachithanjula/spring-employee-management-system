@@ -6,4 +6,6 @@ import sachith.dev.studentmanagmentservice.entity.Department;
 
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Integer> {
+
+    Department findByDepartmentId(String departmentId);
 }

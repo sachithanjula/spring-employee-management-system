@@ -31,4 +31,22 @@ public class DepartmentController {
         return departmentService.getAllDepartments();
     }
 
+    @PostMapping("/getByDepartmentId")
+    public ResponseEntity<CommonJsonResponse> getByDepartmentId(@RequestBody DepartmentMapper departmentMapper) {
+        logger.info("getByDepartmentId");
+        return departmentService.getDepartmentByDepartmentId(departmentMapper.getDepartmentId());
+    }
+
+    @PutMapping("/updateDepartment")
+    public ResponseEntity<CommonJsonResponse> updateDepartment(@RequestBody DepartmentMapper departmentMapper) {
+        logger.info("updateDepartment");
+        return departmentService.updateDepartment(departmentMapper);
+    }
+
+    @PostMapping("/deactivateDepartment")
+    public ResponseEntity<CommonJsonResponse> deactivateDepartment(@RequestBody DepartmentMapper departmentMapper) {
+        logger.info("getByDepartmentId");
+        return departmentService.deactivateDepartment(departmentMapper.getDepartmentId());
+    }
+
 }

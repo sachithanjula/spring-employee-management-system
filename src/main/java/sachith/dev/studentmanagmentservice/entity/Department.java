@@ -27,6 +27,9 @@ public class Department {
     @Column(name = "CREATEDDATE")
     private Date createDate;
 
+    @Column(name = "DEP_STATUS")
+    private String departmentStatus;
+
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 

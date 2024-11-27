@@ -16,4 +16,5 @@ public class EmployeeMapper {
     private String telephone;
     private Date createdDate;
     private DepartmentMapper departmentMapper;
+    private String empStatus;
 }

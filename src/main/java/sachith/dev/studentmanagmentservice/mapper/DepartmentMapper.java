@@ -17,5 +17,6 @@ public class DepartmentMapper {
     private String departmentName;
     private Date createDate;
     private List<Employee> employees;
+    private String departmentStatus;
 
 }
