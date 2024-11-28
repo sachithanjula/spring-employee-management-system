@@ -1,5 +1,6 @@
 package sachith.dev.studentmanagmentservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,7 +31,8 @@ public class Department {
     @Column(name = "DEP_STATUS")
     private String departmentStatus;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "department")
+    @JsonIgnore
     private List<Employee> employees;
 
 }

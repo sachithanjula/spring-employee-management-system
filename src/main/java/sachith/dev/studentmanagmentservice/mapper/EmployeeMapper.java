@@ -17,4 +17,5 @@ public class EmployeeMapper {
     private Date createdDate;
     private DepartmentMapper departmentMapper;
     private String empStatus;
+    private String departmentCode;
 }
